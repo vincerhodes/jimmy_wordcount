@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>WORD COUNTER</h1>
+    <h2>There are {{ wordcount }} words in your text</h2>
+    <a href="{% url 'homepage' %}">Start Again</a>
+    <h1>Your Text:</h1>
+    <p>{{ fulltext }}</p>
+    <h1>Word counts</h1>
+    {% for word, count_total in sorted_words %}
+    {{ word }} - {{ count_total }}<br/>
+    {% endfor %}
+    <p/><a href="{% url 'aboutpage' %}">About this site</a>
+</body>
+</html>
